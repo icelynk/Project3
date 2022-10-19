@@ -1,0 +1,15 @@
+#container {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  width: 400px;
+}
+#container img {
+  background-size: cover;
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+#container img.active {
+  display: block;
+}

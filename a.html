@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project A</title>
+    <script src="./javascript/a.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/a.css" />
+  </head>
+  <body>
+    <h1>Project A</h1>
+    <textarea id="content"></textarea>
+    <h2>Change Color</h2>
+    <select id="color">
+      <option value="red">Red</option>
+      <option value="white">White</option>
+      <option value="blue" selected>Blue</option>
+      <option value="yellow">Yellow</option>
+    </select>
+    <h2>Change Font Size</h2>
+    <input id="font" onkeyup="changeFontSize()" />
+
+    <button id="submit" onclick="handleSubmit()">Submit</button>
+
+    <div id="output">Enter Data Here</div>
+  </body>
+</html>

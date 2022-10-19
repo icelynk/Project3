@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project C</title>
+    <script src="./javascript/c.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/c.css" />
+  </head>
+  <body>
+    <h1>War</h1>
+    <div id="musicButton">
+      <button onclick="music()">Music On</button>
+    </div>
+    <button onclick="newGame()">New Game</button>
+    <div id="gameLayout">
+      <div id="stats">
+        <div id="outcome"></div>
+        <div id="computerStats">
+          <span>Computer: </span>
+          <span id="computerCardCount">0</span>
+        </div>
+        <div id="playerStats">
+          <span>Player: </span>
+          <span id="playerCardCount">0</span>
+        </div>
+        <button id="flipCards" class="button" onclick="flipPlayerCard()">
+          Flip Cards
+        </button>
+        <button id="nextRound" class="button" onclick="collect()">
+          Next Round
+        </button>
+        <button id="tieBreaker" class="button" onclick="tieBreaker()">
+          Tie Breaker
+        </button>
+      </div>
+      <div id="stage">
+        <div>
+          <div id="computerStage" class="stage"></div>
+          <div id="computerRunOff" class="runOff multipleCards"></div>
+        </div>
+        <div>
+          <div id="playerStage" class="stage"></div>
+          <div id="playerRunOff" class="runOff multipleCards"></div>
+        </div>
+      </div>
+    </div>
+    <div id="overlay">
+      <div id="winBanner">
+        <span id="close" onclick="closeOverlay()">X</span>
+        <div>
+          <h1 id="winBannerTitle">Winner!</h1>
+          <p id="winBannerMessage">Fantastic</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

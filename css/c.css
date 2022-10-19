@@ -1,0 +1,194 @@
+/*Layout*/
+body {
+  background: #527a2d;
+}
+
+#gameLayout {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 25% auto;
+}
+
+#musicButton {
+  margin-bottom: 10px;
+}
+
+#stats {
+  border: 3px solid #5b8b32;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: grid;
+  grid-template-rows: 30px 30px 30px 70px 70px 70px;
+  padding: 25px;
+  width: 100%;
+}
+
+#stage {
+  border: 3px solid #5b8b32;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: grid;
+  height: 545px;
+  gap: 25px;
+  grid-template-rows: 235px 235px;
+  padding: 25px;
+}
+#stage > div {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: 160px auto;
+}
+.stage {
+  align-items: center;
+  border: 3px solid #5b8b32;
+  border-radius: 5px;
+  display: flex;
+  height: 235px;
+  justify-content: space-evenly;
+  padding: 2px;
+}
+.runOff {
+  align-items: center;
+  border: 3px solid #5b8b32;
+  border-radius: 5px;
+  display: flex;
+  height: 235px;
+  padding: 2px;
+}
+
+/*Card deck*/
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 5px;
+  height: 225px;
+  position: relative;
+  width: 150px;
+}
+.card.unflipped::after {
+  background-color: #000080;
+  border-radius: 5px;
+  content: "";
+  height: 205px;
+  left: 10px;
+  position: absolute;
+  top: 10px;
+  width: 130px;
+}
+.card.flipped::after {
+  font-size: 100px;
+  position: absolute;
+  text-align: center;
+  top: calc(50% - 65px);
+  width: 100%;
+}
+.hearts::after {
+  color: #ff0000;
+  content: "\2665";
+}
+.spades::after {
+  color: #000000;
+  content: "\2660";
+}
+.clubs::after {
+  color: #000000;
+  content: "\2663";
+}
+.diamonds::after {
+  color: #ff0000;
+  content: "\2666";
+}
+.value {
+  align-items: center;
+  display: grid;
+  font-size: 30px;
+  font-weight: bold;
+  grid-template-rows: 50% 50%;
+  left: 10px;
+  position: absolute;
+  top: 5px;
+}
+.value.bottom {
+  bottom: 5px;
+  left: unset;
+  right: 10px;
+  top: inherit;
+}
+.multipleCards {
+  position: relative;
+}
+.multipleCards .card {
+  position: absolute;
+}
+
+/*Buttons*/
+.button {
+  background: #3d6914;
+  border-radius: 5px;
+  color: #ffffff;
+  height: 60px;
+  margin-bottom: 10px;
+  transition: all ease-in-out 150ms;
+}
+.button:hover {
+  background: #28450d;
+  cursor: pointer;
+}
+.button:disabled {
+  background: #28450d;
+  color: #3d6914;
+  cursor: not-allowed;
+}
+
+/*Overlay*/
+#overlay {
+  background-color: rgba(50, 50, 50, 0.5);
+  display: none;
+  height: 100vh;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+}
+
+/*Win Banner*/
+#winBanner {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  height: 20%;
+  justify-content: center;
+  left: 35%;
+  padding: 20px;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  width: 30%;
+}
+#winBannerTitle {
+  margin-top: 0;
+}
+
+#close {
+  align-items: center;
+  border: 1px solid #333333;
+  border-radius: 50%;
+  display: flex;
+  height: 25px;
+  position: absolute;
+  right: 5px;
+  justify-content: center;
+  top: 5px;
+  transition: all ease-in-out 150ms;
+  width: 25px;
+}
+#close:hover {
+  background: #333333;
+  color: #ffffff;
+  cursor: pointer;
+}
