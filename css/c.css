@@ -1,8 +1,22 @@
 /*Layout*/
 body {
   background: #527a2d;
+  margin: 0;
+  padding: 0;
 }
 
+#topNav {
+  background-color: #000000;
+  color: #ffffff;
+  height: 50px;
+  width: 100%;
+}
+
+#topNav h1 {
+  display: inline-block;
+  font-size: 40px;
+  margin: 0;
+}
 #gameLayout {
   display: grid;
   gap: 25px;

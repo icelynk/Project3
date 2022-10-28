@@ -1,7 +1,7 @@
 const game = {
   audio: {
     computerWins: loadSound("ComputerWins.wav"),
-    dealCard: loadSound(""),
+    dealCard: loadSound("DealCard.ogg"),
     deckShuffle: loadSound("DeckShuffle.mp3"),
     flipCard: loadSound("FlipCard.ogg"),
     music: loadSound("music2.mp3"),
@@ -129,10 +129,12 @@ function dealCards() {
   game.computerHand = computerCards;
   game.deck = [];
 
+  const delay = 2300;
+
   for (let i = 0; i < 25; i++) {
     setTimeout(() => {
       playSound("dealCard");
-    }, 1000);
+    }, 100 * i + delay);
   }
 }
 
@@ -369,7 +371,6 @@ function loadSound(filename) {
 }
 
 function playSound(filename) {
-  //const audio = new Audio(`./audio/war/${filename}`);
   game.audio[filename].cloneNode(true).play();
 }
 
