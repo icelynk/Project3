@@ -1,0 +1,46 @@
+body {
+  background: #07dbbf;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+.wrapper {
+  color: #ffffff;
+  margin: 30px auto;
+  text-align: center;
+  width: 800px;
+}
+
+h1,
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 42px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+#seconds,
+#tens {
+  font-size: 40px;
+}
+
+button {
+  background: #04917e;
+  border: solid 1px #ffffff;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 10px;
+  outline: none;
+  padding: 18px 10px;
+  text-decoration: none;
+  width: 180px;
+}
+
+button:hover {
+  background: #ffffff;
+  border: solid 1px #ffffff;
+  color: #07dbbf;
+  transition: all 0.3s ease-in-out;
+}
