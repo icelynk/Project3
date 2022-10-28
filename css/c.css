@@ -6,9 +6,12 @@ body {
 }
 
 #topNav {
+  align-items: center;
   background-color: #000000;
   color: #ffffff;
+  display: flex;
   height: 50px;
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -16,15 +19,23 @@ body {
   display: inline-block;
   font-size: 40px;
   margin: 0;
+  padding: 0 8px;
 }
+
+.navbarItem {
+  background-color: #000000;
+  border: none;
+  color: #ffffff;
+  height: 50px;
+  line-height: 50px;
+  margin: 0;
+  padding: 0 8px;
+}
+
 #gameLayout {
   display: grid;
   gap: 25px;
   grid-template-columns: 25% auto;
-}
-
-#musicButton {
-  margin-bottom: 10px;
 }
 
 #stats {
@@ -205,4 +216,20 @@ body {
   background: #333333;
   color: #ffffff;
   cursor: pointer;
+}
+
+#settings {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  height: 20%;
+  justify-content: center;
+  left: 35%;
+  padding: 20px;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  width: 30%;
 }

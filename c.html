@@ -8,8 +8,11 @@
   <body>
     <div id="topNav">
       <h1>War</h1>
-      <button id="musicButton" onclick="music()">Music On</button>
-      <button onclick="newGame()">New Game</button>
+      <button class="navbarItem" onclick="newGame()">New Game</button>
+      <button class="navbarItem" onclick="toggleSettings()">Settings</button>
+      <button class="navbarItem" id="musicButton" onclick="music()">
+        Music On
+      </button>
     </div>
     <div id="gameLayout">
       <div id="stats">
@@ -44,6 +47,18 @@
       </div>
     </div>
     <div id="overlay">
+      <div id="settings">
+        <h1>Settings</h1>
+        <label for="musicVolume">Music Volume</label>
+        <input
+          type="range"
+          id="musicVolume"
+          name="musicVolume"
+          min="0"
+          max="100"
+          onchange="setMusicVolume()"
+        />
+      </div>
       <div id="winBanner">
         <span id="close" onclick="closeOverlay()">X</span>
         <div>

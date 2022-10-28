@@ -23,6 +23,12 @@ const game = {
     taunt12: loadSound("taunt12.mp3"),
     tieBreaker: loadSound("TieBreaker.wav"),
   },
+  music: {
+    currentTrack: null,
+  },
+  settings: {
+    musicVolume: 1,
+  },
 
   deck: [],
   playerHand: [],
@@ -53,7 +59,9 @@ const values = [
 
 //Music on
 function music() {
-  playSound("music");
+  game.music.currentTrack = game.audio.music.cloneNode(true);
+  game.music.currentTrack.volume = game.settings.musicVolume;
+  game.music.currentTrack.play();
 }
 
 //New game
@@ -134,7 +142,7 @@ function dealCards() {
   for (let i = 0; i < 25; i++) {
     setTimeout(() => {
       playSound("dealCard");
-    }, 100 * i + delay);
+    }, 90 * i + delay);
   }
 }
 
@@ -357,6 +365,8 @@ function closeOverlay() {
 
 function openWinBanner(title, message) {
   document.getElementById("overlay").style.display = "block";
+  document.getElementById("settings").style.display = "none";
+  document.getElementById("winBanner").style.display = "block";
   document.getElementById("winBannerTitle").innerHTML = title;
   document.getElementById("winBannerMessage").innerHTML = message;
 
@@ -393,27 +403,15 @@ function playTaunt() {
   playSound(taunt);
 }
 
-/*Sound List
+function toggleSettings() {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("settings").style.display = "block";
+  document.getElementById("winBanner").style.display = "none";
+}
 
-Shuffling deck sound
-Dealing a card
-Flipping a card
-
-Player card wins
-Player card loses
-Tie breaker
-
-Player wins
-Computer wins
-
-New game
-Button click(subtle)
-
-Backgrounnd music
-Computer Taunt(s)
-
-
-
-
-
-*/
+function setMusicVolume() {
+  const musicInput = document.getElementById("musicVolume");
+  console.log("volume", musicInput.value);
+  game.settings.musicVolume = musicInput.value / 100;
+  game.music.currentTrack.volume = game.settings.musicVolume;
+}
