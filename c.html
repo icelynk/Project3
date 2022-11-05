@@ -48,16 +48,40 @@
     </div>
     <div id="overlay">
       <div id="settings">
+        <span id="close" onclick="closeOverlay()">X</span>
         <h1>Settings</h1>
-        <label for="musicVolume">Music Volume</label>
-        <input
-          type="range"
-          id="musicVolume"
-          name="musicVolume"
-          min="0"
-          max="100"
-          onchange="setMusicVolume()"
-        />
+        <div>
+          <label for="musicVolume">Music Volume</label>
+          <input
+            type="range"
+            id="musicVolume"
+            name="musicVolume"
+            min="0"
+            max="100"
+            oninput="setMusicVolume()"
+          />
+          <span id="musicVolumeLabel"></span>
+        </div>
+        <div>
+          <label for="soundVolume">Sound Volume</label>
+          <input
+            type="range"
+            id="soundVolume"
+            name="soundVolume"
+            min="0"
+            max="100"
+            oninput="setSoundVolume()"
+          />
+          <span id="soundVolumeLabel"></span>
+        </div>
+        <div>
+          <label for="backgroundColor">Background Color</label>
+          <select id="backgroundColor" onchange="setBackgroundColor()">
+            <option value="green">Green</option>
+            <option value="orange">Orange</option>
+            <option value="blue">Blue</option>
+          </select>
+        </div>
       </div>
       <div id="winBanner">
         <span id="close" onclick="closeOverlay()">X</span>

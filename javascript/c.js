@@ -27,7 +27,10 @@ const game = {
     currentTrack: null,
   },
   settings: {
-    musicVolume: 1,
+    musicVolume: 0.75,
+    soundVolume: 0.75,
+    backgroundColor: "green",
+    cardColor: "blue",
   },
 
   deck: [],
@@ -61,6 +64,7 @@ const values = [
 function music() {
   game.music.currentTrack = game.audio.music.cloneNode(true);
   game.music.currentTrack.volume = game.settings.musicVolume;
+  game.music.currentTrack.loop = true;
   game.music.currentTrack.play();
 }
 
@@ -128,8 +132,8 @@ function shuffleDeck() {
 //Deal cards
 function dealCards() {
   //Give cards to player
-  //const playerCards = game.deck.splice(25, 26);
-  const playerCards = game.deck.splice(0, 50);
+  const playerCards = game.deck.splice(25, 26);
+  //const playerCards = game.deck.splice(0, 50);
   //Give cards to computer
   const computerCards = game.deck;
 
@@ -381,7 +385,9 @@ function loadSound(filename) {
 }
 
 function playSound(filename) {
-  game.audio[filename].cloneNode(true).play();
+  const sound = game.audio[filename].cloneNode(true);
+  sound.volume = game.settings.soundVolume;
+  sound.play();
 }
 
 function playTaunt() {
@@ -407,11 +413,76 @@ function toggleSettings() {
   document.getElementById("overlay").style.display = "block";
   document.getElementById("settings").style.display = "block";
   document.getElementById("winBanner").style.display = "none";
+
+  const musicInput = document.getElementById("musicVolume");
+  musicInput.value = game.settings.musicVolume * 100;
+  const musicVolumeLabel = document.getElementById("musicVolumeLabel");
+  musicVolumeLabel.innerHTML = musicInput.value + "%";
+
+  const soundInput = document.getElementById("soundVolume");
+  soundInput.value = game.settings.soundVolume * 100;
+  const soundVolumeLabel = document.getElementById("soundVolumeLabel");
+  soundVolumeLabel.innerHTML = soundInput.value + "%";
 }
 
 function setMusicVolume() {
   const musicInput = document.getElementById("musicVolume");
   console.log("volume", musicInput.value);
   game.settings.musicVolume = musicInput.value / 100;
-  game.music.currentTrack.volume = game.settings.musicVolume;
+
+  if (game.music.currentTrack) {
+    game.music.currentTrack.volume = game.settings.musicVolume;
+  }
+  const musicVolumeLabel = document.getElementById("musicVolumeLabel");
+  musicVolumeLabel.innerHTML = musicInput.value + "%";
+}
+
+function setSoundVolume() {
+  const soundInput = document.getElementById("soundVolume");
+  game.settings.soundVolume = soundInput.value / 100;
+
+  const soundVolumeLabel = document.getElementById("soundVolumeLabel");
+  soundVolumeLabel.innerHTML = soundInput.value + "%";
+}
+
+function setBackgroundColor() {
+  const backgroundInput = document.getElementById("backgroundColor");
+  game.settings.backgroundColor = backgroundInput.value;
+
+  let backgroundColor = "";
+  let lineColor = "";
+  let buttonColor = "";
+
+  switch (backgroundInput.value) {
+    case "green":
+      backgroundColor = "#527a2d";
+      lineColor = "#5b8b32";
+      buttonColor = "#3d6914";
+      break;
+    case "orange":
+      backgroundColor = "#cc6012";
+      lineColor = "#ea6d14";
+      buttonColor = "#995705";
+      break;
+    case "blue":
+      backgroundColor = "#0f7fa8";
+      lineColor = "#0c5c79";
+      buttonColor = "#0b0473";
+      break;
+  }
+
+  document.body.style.backgroundColor = backgroundColor;
+  const outlineList = document.querySelectorAll(
+    "#stats, #stage, .stage, .runOff"
+  );
+  const outlineArray = [...outlineList];
+  outlineArray.forEach((el) => {
+    el.style.borderColor = lineColor;
+  });
+
+  const buttonList = document.querySelectorAll(".button");
+  const buttonArray = [...buttonList];
+  buttonArray.forEach((el) => {
+    el.style.backgroundColor = lineColor;
+  });
 }
