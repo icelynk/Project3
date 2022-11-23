@@ -1,0 +1,20 @@
+[
+  {
+    "data": {
+      "content": "",
+      "timestamp": "",
+      "source": "",
+      "retweetCount": "",
+      "quoteTweetCount": "",
+      "likeCount": "",
+      "images": []
+    },
+    "user": {
+      "account": "",
+      "avatar": "",
+      "displayName": "",
+      "followerCount": "",
+      "followingCount": ""
+    }
+  }
+]
