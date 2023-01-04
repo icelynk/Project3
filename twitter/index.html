@@ -13,16 +13,17 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="./javascript/tweet.js" type="text/javascript"></script>
     <script src="./javascript/twitter.js" type="text/javascript"></script>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <nav class="navbar bg-light">
+    <nav class="navbar fixed-top bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"> Twitter Clone </a>
       </div>
     </nav>
-    <div class="container mt-3" id="layout-container">
+    <div class="container" id="layout-container">
       <div class="row">
         <div class="col" id="menu-container">
           <ul class="list-group">
@@ -34,10 +35,18 @@
           </ul>
         </div>
         <div class="col-6" id="timeline-container">
-          <div class="card mb-3">
-            <img src="./images/open.jpg" class="card-img-top" alt="..." />
+          <div id="generated-tweets"></div>
+          <!--Start delete here-->
+          <div class="tweet-container card mb-3">
+            <div class="card-header profile-container">
+              <img src="./images/avatars/avatar1.jpg" class="avatar" />
+              <div class="name-container">
+                <div class="real-name">Frank Smith</div>
+                <div class="account-name">@FrankSmith</div>
+              </div>
+            </div>
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <img src="./images/open.jpg" class="card-img-top" alt="..." />
               <p class="card-text">
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
@@ -46,8 +55,91 @@
               <p class="card-text">
                 <small class="text-muted">Last updated 3 mins ago</small>
               </p>
+              <div class="card-text stats-container">
+                <div class="stat-container">
+                  <span class="stat">1000</span
+                  ><span class="stat-type">Retweets</span>
+                </div>
+                <div class="stat-container">
+                  <span class="stat">1000</span
+                  ><span class="stat-type">Quote Tweets</span>
+                </div>
+                <div class="stat-container">
+                  <span class="stat">1000</span
+                  ><span class="stat-type">Likes</span>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="tweet-container card mb-3">
+            <div class="card-header profile-container">
+              <img src="./images/avatars/avatar2.jpg" class="avatar" />
+              <div class="name-container">
+                <div class="real-name">Elizabeth Simpson</div>
+                <div class="account-name">@ElizabethSimpson</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <img src="./images/pug.jpg" class="card-img-top" alt="..." />
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+              <div class="card-text stats-container">
+                <div class="stat-container">
+                  <span class="stat">3005</span
+                  ><span class="stat-type">Retweets</span>
+                </div>
+                <div class="stat-container">
+                  <span class="stat">4000</span
+                  ><span class="stat-type">Quote Tweets</span>
+                </div>
+                <div class="stat-container">
+                  <span class="stat">22000</span
+                  ><span class="stat-type">Likes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tweet-container card mb-3">
+            <div class="card-header profile-container">
+              <img src="./images/avatars/avatar3.jpg" class="avatar" />
+              <div class="name-container">
+                <div class="real-name">Dr. Evil's Cat</div>
+                <div class="account-name">@DrEvilsCat</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <img src="./images/sphinx.jpg" class="card-img-top" alt="..." />
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
+              <div class="card-text stats-container">
+                <div class="stat-container">
+                  <span class="stat">100</span
+                  ><span class="stat-type">Retweets</span>
+                </div>
+                <div class="stat-container">
+                  <span class="stat">500</span
+                  ><span class="stat-type">Quote Tweets</span>
+                </div>
+                <div class="stat-container">
+                  <span class="stat">13000</span
+                  ><span class="stat-type">Likes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--End delete here-->
         </div>
         <div class="col" id="trending-container">
           <div class="list-group">

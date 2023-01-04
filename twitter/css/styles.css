@@ -1,0 +1,53 @@
+/*Layout*/
+#layout-container {
+  margin-top: 76px;
+}
+#layout-container .row {
+}
+#menu-container,
+#trending-container {
+  height: calc(100vh - 76px);
+  position: sticky;
+  top: 76px;
+}
+
+/*Tweet Header*/
+
+.profile-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 48px auto;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+}
+.name-container {
+  display: grid;
+  grid-template-rows: 24px 24px;
+}
+.real-name {
+  font-weight: bold;
+}
+
+/*Stats*/
+
+.stats-container {
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+}
+.stat-container {
+  display: flex;
+  font-size: 12px;
+  gap: 3px;
+  justify-content: start;
+}
+.stat {
+  font-weight: bold;
+}
+.stat-type {
+  color: #6c757d;
+}

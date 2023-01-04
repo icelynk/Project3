@@ -1,6 +1,24 @@
 [
   {
-    "data": {
+    "tweet": {
+      "content": "Just opening up a new shop for Christmas. Come check it out!",
+      "timestamp": "Last updated 1 min ago",
+      "source": "",
+      "retweetCount": "1000",
+      "quoteTweetCount": "1000",
+      "likeCount": "1000",
+      "images": ["./images/open.jpg"]
+    },
+    "user": {
+      "accountName": "@FrankSmith",
+      "avatar": "./images/avatars/avatar1.jpg",
+      "realName": "Frank Smith",
+      "followerCount": "43",
+      "followingCount": "599"
+    }
+  },
+  {
+    "tweet": {
       "content": "",
       "timestamp": "",
       "source": "",
@@ -10,9 +28,27 @@
       "images": []
     },
     "user": {
-      "account": "",
-      "avatar": "",
-      "displayName": "",
+      "accountName": "@ElizabethSimpson",
+      "avatar": "./images/avatars/avatar2.jpg",
+      "realName": "Elizabeth Simpson",
+      "followerCount": "",
+      "followingCount": ""
+    }
+  },
+  {
+    "tweet": {
+      "content": "",
+      "timestamp": "",
+      "source": "",
+      "retweetCount": "",
+      "quoteTweetCount": "",
+      "likeCount": "",
+      "images": []
+    },
+    "user": {
+      "accountName": "@DrEvilsCat",
+      "avatar": "./images/avatars/avatar3.jpg",
+      "realName": "Dr. Evil's Cat",
       "followerCount": "",
       "followingCount": ""
     }

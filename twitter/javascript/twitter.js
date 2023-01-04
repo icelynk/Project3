@@ -9,5 +9,12 @@ function initialize() {
 function loadTimeline() {
   fetch("./api/timeline.json")
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => {
+      const timeline = document.getElementById("generated-tweets");
+      timeline.innerHTML = "";
+
+      data.forEach((tweet) => {
+        timeline.appendChild(renderTweet(tweet));
+      });
+    });
 }
