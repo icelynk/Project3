@@ -19,38 +19,92 @@
   },
   {
     "tweet": {
-      "content": "",
-      "timestamp": "",
+      "content": "Look what my pup found when we were out hiking! Way to recycle Mr. Pugsley!",
+      "timestamp": "Last updated 3 mins ago",
       "source": "",
-      "retweetCount": "",
-      "quoteTweetCount": "",
-      "likeCount": "",
-      "images": []
+      "retweetCount": "3005",
+      "quoteTweetCount": "4000",
+      "likeCount": "22000",
+      "images": ["./images/pug.jpg"]
     },
     "user": {
       "accountName": "@ElizabethSimpson",
       "avatar": "./images/avatars/avatar2.jpg",
       "realName": "Elizabeth Simpson",
-      "followerCount": "",
-      "followingCount": ""
+      "followerCount": "2000",
+      "followingCount": "200"
     }
   },
   {
     "tweet": {
-      "content": "",
-      "timestamp": "",
+      "content": "Would love to have this as my new ultimate lair!",
+      "timestamp": "Last updated 3 mins ago",
       "source": "",
-      "retweetCount": "",
-      "quoteTweetCount": "",
-      "likeCount": "",
-      "images": []
+      "retweetCount": "100",
+      "quoteTweetCount": "500",
+      "likeCount": "13000",
+      "images": ["./images/sphinx.jpg"]
     },
     "user": {
       "accountName": "@DrEvilsCat",
       "avatar": "./images/avatars/avatar3.jpg",
       "realName": "Dr. Evil's Cat",
-      "followerCount": "",
-      "followingCount": ""
+      "followerCount": "5500",
+      "followingCount": "23"
+    }
+  },
+  {
+    "tweet": {
+      "content": "Would love to hit up my favorite arcade this afternoon and beat my Frogger score",
+      "timestamp": "Last updated 4 mins ago",
+      "source": "",
+      "retweetCount": "270",
+      "quoteTweetCount": "450",
+      "likeCount": "3400",
+      "images": ["./images/arcade.jpg"]
+    },
+    "user": {
+      "accountName": "@Yoshiii",
+      "avatar": "./images/avatars/avatar7.jpg",
+      "realName": "Yoshi Kondo",
+      "followerCount": "30000",
+      "followingCount": "300"
+    }
+  },
+  {
+    "tweet": {
+      "content": "Dreaming about my next meal...",
+      "timestamp": "Last updated 4 mins ago",
+      "source": "",
+      "retweetCount": "24",
+      "quoteTweetCount": "111",
+      "likeCount": "50",
+      "images": ["./images/burger.jpg"]
+    },
+    "user": {
+      "accountName": "@MrPickles",
+      "avatar": "./images/avatars/avatar11.jpg",
+      "realName": "Montgomery Pickles",
+      "followerCount": "299",
+      "followingCount": "25"
+    }
+  },
+  {
+    "tweet": {
+      "content": "Another outbreak...  Time to catch up on some of my old faves.",
+      "timestamp": "Last updated 5 mins ago",
+      "source": "",
+      "retweetCount": "350",
+      "quoteTweetCount": "230",
+      "likeCount": "400",
+      "images": ["./images/vcr.jpg"]
+    },
+    "user": {
+      "accountName": "@GaryEgg",
+      "avatar": "./images/avatars/avatar6.jpg",
+      "realName": "Gary Eggerton",
+      "followerCount": "299",
+      "followingCount": "25"
     }
   }
 ]
