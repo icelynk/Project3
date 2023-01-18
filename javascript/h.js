@@ -9,3 +9,7 @@ let numberOfShots = prompt(
 alert(
   `You are now scheduled for ${numberOfShots} Covid vaccines.  Please report to your nearest LifeLabs and thank you for trusting the system!`
 );
+
+var remainder;
+remainder = 11 % 3;
+console.log(remainder);
