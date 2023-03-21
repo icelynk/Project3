@@ -28,6 +28,7 @@ body {
 }
 
 #menu {
+  position: relative;
   z-index: 2;
 }
 
@@ -58,22 +59,31 @@ body {
 .nav {
   transition: 0.3s ease;
   display: none;
+  position: absolute;
+  right: 0px;
+  top: 50px;
 }
 
 .nav ul {
+  margin: 0;
   padding: 0;
 }
 
 .nav li {
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
 .nav li a {
+  border: none;
   color: white;
+  display: block;
   font-size: 20px;
-  margin-left: 5px;
+  height: 50px;
+  padding-left: 15px;
   text-decoration: none;
+  width: 150px;
 }
 
 .nav li a:hover {
@@ -137,9 +147,6 @@ body {
 h2 {
   color: #ffffff;
   font-size: 70px;
-  left: 28%;
-  position: absolute;
-  top: 5%;
 }
 
 h3 {
@@ -160,15 +167,29 @@ h4 {
   width: 55px;
 }
 
+#hero-image h2 {
+  position: absolute;
+  text-align: center;
+  text-shadow: 3px 3px 10px #000;
+  top: 50px;
+  width: 100%;
+}
+
 .subheader {
   color: #00550d;
   font-size: 40px;
-  margin-left: 450px;
-  margin-right: 490px;
-  margin-top: 150px;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  width: 40%;
+}
+
+.blurred-card {
+  background: rgba(232, 218, 218, 0.4);
 }
 
 .left-subheader {
+  color: #945007;
   margin-right: 1100px;
 }
 
@@ -190,9 +211,23 @@ h4 {
 
 #hero-image {
   align-items: center;
-  background: url(../images/g/bible.jpg);
+  background: url(../images/g/biblecropped.jpg);
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 900px;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.section {
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -203,50 +238,37 @@ h4 {
 }
 
 #about-page {
-  align-items: center;
-  background: url(../images/g/About.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  height: 900px;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
+  background-image: url(../images/g/About.jpg);
 }
 
 #news-page {
-  align-items: center;
-  background: url(../images/g/news.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  height: 900px;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
+  background-image: url(../images/g/news.jpg);
 }
 
 #episode-page {
-  align-items: center;
-  background: url(../images/g/episodes.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  height: 900px;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
+  background-image: url(../images/g/episodes.jpg);
 }
 
 #episode-subheader {
   color: #ffffff;
   font-size: 25px;
-  margin-bottom: 75px;
-  margin-right: 450px;
+  list-style-type: none;
+  margin-right: 600px;
+}
+
+#episode-subheader a {
+  border: 2px solid #f2f2f2;
+  border-radius: 0px;
+  color: #f2f2f2;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#episode-subheader li :hover {
+  box-shadow: inset 400px 0 0 0 #a0a0a0;
+  color: #f4f4f4;
+  text-decoration: none;
+  transition: 0.5s;
 }
